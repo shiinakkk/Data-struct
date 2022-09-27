@@ -1,4 +1,4 @@
-package DataStruct.template.Queue;
+package DataStruct.Template.Queue;
 
 import DataStruct.Abstract.Queue;
 

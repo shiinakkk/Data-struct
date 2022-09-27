@@ -1,4 +1,4 @@
-package DataStruct.template.Stack;
+package DataStruct.Template.Stack;
 
 import DataStruct.Abstract.Stack;
 

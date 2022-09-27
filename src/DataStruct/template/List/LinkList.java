@@ -1,4 +1,4 @@
-package DataStruct.template.List;
+package DataStruct.Template.List;
 
 import DataStruct.Abstract.LinearList;
 
