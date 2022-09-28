@@ -1,9 +1,8 @@
-package DataStruct.Template.tree;
+package DataStruct.Template.Tree;
 
 import DataStruct.Template.Queue.SeqQueue;
 import DataStruct.Template.Stack.SeqStack;
 
-import java.util.Arrays;
 import java.util.function.Function;
 
 public class BinaryTree <T>{

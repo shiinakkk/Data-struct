@@ -1,4 +1,4 @@
-package DataStruct.Template.type;
+package DataStruct.Template.Type;
 
 public enum MatrixType {
     SymmetricalMatrix,

@@ -1,4 +1,4 @@
-package DataStruct.Template.tree;
+package DataStruct.Template.Tree;
 
 public class HuffmanTreeNode {
     String val;

@@ -1,7 +1,7 @@
 package DataStruct.Template.MatrixStorage;
 
 import DataStruct.Abstract.MatrixStorage;
-import DataStruct.Template.type.MatrixType;
+import DataStruct.Template.Type.MatrixType;
 
 public class MatrixStorageImpl implements MatrixStorage {
 

@@ -1,4 +1,4 @@
-package DataStruct.Template.tree;
+package DataStruct.Template.Tree;
 
 import java.util.HashMap;
 import java.util.HashSet;
