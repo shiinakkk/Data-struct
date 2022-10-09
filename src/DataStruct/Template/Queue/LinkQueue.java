@@ -15,7 +15,7 @@ public class LinkQueue <T> implements Queue <T> {
     }
     Node front, rear;
 
-    LinkQueue(){
+    public LinkQueue(){
         front = rear = null;
     }
 

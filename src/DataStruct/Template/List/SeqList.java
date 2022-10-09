@@ -2,7 +2,9 @@ package DataStruct.Template.List;
 
 import DataStruct.Abstract.LinearList;
 
-public class SeqList <T> implements LinearList <T>{
+import java.util.Iterator;
+
+public class SeqList <T> implements LinearList <T>, Iterable<T>{
     private Object []data;
     private int length;
     private int capacity = 50;
@@ -50,9 +52,7 @@ public class SeqList <T> implements LinearList <T>{
         if(length == capacity){
             capacity = capacity * 2;
             Object []newData = new Object[capacity];
-            for(int i = 0; i < length; i ++){
-                newData[i] = data[i];
-            }
+            System.arraycopy(data, 0, newData, 0, length);
             data = newData;
         }
     }
@@ -81,5 +81,26 @@ public class SeqList <T> implements LinearList <T>{
     @Override
     public boolean Empty() {
         return length == 0;
+    }
+
+    class Itr implements  Iterator<T>{
+        int po;
+        Itr(){
+            po = 0;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return po < length;
+        }
+
+        @Override
+        public T next() {
+            return (T)data[po ++];
+        }
+    }
+    @Override
+    public Iterator<T> iterator() {
+        return new Itr();
     }
 }

@@ -2,7 +2,30 @@ package DataStruct.Template.List;
 
 import DataStruct.Abstract.LinearList;
 
-public class LinkList<T> implements LinearList<T> {
+import java.util.Iterator;
+
+public class LinkList<T> implements LinearList<T>, Iterable<T>{
+
+    class Itr implements Iterator<T>{
+        int po;
+        Itr(){
+            po = 0;
+        }
+        @Override
+        public boolean hasNext() {
+            return po < length;
+        }
+
+        @Override
+        public T next() {
+            return GetElem(po ++);
+        }
+    }
+    @Override
+    public Iterator<T> iterator() {
+        return new Itr();
+    }
+
     class LinkNode{
         public T node;      // 为null时表示为头节点
         LinkNode next;
