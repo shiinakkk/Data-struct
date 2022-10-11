@@ -105,8 +105,8 @@ public class BinaryTree <T>{
         while(!stack.StackEmpty()){
             BinaryTreeNode<T> node = stack.getTop();
             if(node.passed == 0){
-                if(node.right != null) stack.Push(node.right);
-                if(node.left != null) stack.Push(node.left);
+                if(node.right != null && node.right.passed == 0) stack.Push(node.right);
+                if(node.left != null && node.left.passed == 0) stack.Push(node.left);
                 node.pass();
             }else{
                 stack.Pop();

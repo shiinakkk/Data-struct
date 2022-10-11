@@ -9,11 +9,6 @@ public interface GraphNode <T>{
     public T getVal();
 
     /**
-     * 取出相邻节点
-     */
-    public LinkList<GraphNode<T>> getNeighbour();
-
-    /**
      * 是否遍历过
      */
     public boolean passed();
