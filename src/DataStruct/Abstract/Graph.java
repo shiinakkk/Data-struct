@@ -4,7 +4,26 @@ import DataStruct.Template.List.LinkList;
 
 public interface Graph <T>{
     /**
-     * 取出相邻节点
+     * 是否为有向图
      */
-    public LinkList<GraphNode<T>> getNeighbour(GraphNode<T> node);
+    default boolean hasDirect(){
+        return false;
+    }
+
+    /**
+     * 取出有关的边
+     */
+    default LinkList<Edge<T>> getNeighbour(GraphNode<T> node){
+        return new LinkList<Edge<T>>();
+    };
+
+    /**
+     * 遍历所有的边
+     */
+    Set<Edge<T>> getEdges();
+
+    /**
+     * 遍历所有的点
+     */
+    Set<GraphNode<T>> getNodes();
 }

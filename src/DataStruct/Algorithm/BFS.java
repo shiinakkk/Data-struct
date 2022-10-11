@@ -1,5 +1,6 @@
 package DataStruct.Algorithm;
 
+import DataStruct.Abstract.Edge;
 import DataStruct.Abstract.GraphNode;
 import DataStruct.Abstract.Queue;
 import DataStruct.Template.List.LinkList;
@@ -17,8 +18,9 @@ public class BFS <Node, Graph, T>{
         root.passed();
         while(!queue.queueEmpty()){
             GraphNode<T> now = queue.deQueue();
-            LinkList<GraphNode<T>> neighbours = graph.getNeighbour(now);
-            for(GraphNode<T> neighbour : neighbours){
+            LinkList<Edge<T>> edges = graph.getNeighbour(now);
+            for(Edge<T> edge : edges){
+                GraphNode<T> neighbour = edge.getTarget();
                 if(!neighbour.passed()) {
                     queue.enQueue(neighbour);
                     neighbour.pass();
